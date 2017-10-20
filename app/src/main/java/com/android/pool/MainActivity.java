@@ -43,6 +43,7 @@ ScheduledThreadPool
 SingleThreadExecutor
 
 -单例线程，任意时间池中只能有一个线程
+如果当前线程意外终止，会创建一个新线程继续执行任务，这和我们直接创建线程不同，也和newFixedThreadPool(1)不同。
 -用的是和cache池和fixed池相同的底层池，但线程数目是1-1,0秒IDLE（无IDLE）
 
      */
